@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Menu mode="horizontal" theme="dark" active-name="1">
-      <MenuItem name="1">
-        <Icon type="ios-paper" />内容管理
+    <Menu mode="horizontal" theme="dark" active-name="/home" @on-select="onMenuSelect">
+      <MenuItem name="/home">
+        <Icon type="md-home" />主页
       </MenuItem>
       <MenuItem name="2">
         <Icon type="ios-people" />用户管理
@@ -34,6 +34,12 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    onMenuSelect(path) {
+      if (path === this.$route.path) return
+      this.$router.push(path)
+    }
   }
 };
 </script>

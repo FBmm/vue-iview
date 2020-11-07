@@ -25,7 +25,7 @@
         <Icon type="ios-construct" />综合设置
       </MenuItem>
     </Menu>
-    <div>
+    <div class="main-content">
       <router-view />
     </div>
   </div>
@@ -43,3 +43,12 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.main-content {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+</style>

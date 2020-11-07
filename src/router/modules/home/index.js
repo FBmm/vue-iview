@@ -1,13 +1,16 @@
 import Layout from '@/layout'
 
 const homeRouter = {
-  path: '/home',
+  path: '/',
   component: Layout,
-  name: 'home',
-  meta: {
-    title: 'home',
-    icon: 'home'
-  },
+  children: [
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('@/views/home/index'),
+      meta: { title: 'home', icon: 'home' }
+    }
+  ]
 }
 
 export default homeRouter

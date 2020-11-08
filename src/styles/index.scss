@@ -1,3 +1,6 @@
+body {
+  background-color: #f5f7fa;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -6,4 +9,12 @@
 }
 .app-container {
   padding: 24px;
+}
+.main-content {
+  overflow: auto;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="iview-examples-container">
     <TwoColsLayout class="iview-examples-container__layout">
-      <div class="left" slot="left">
-        <Menu active-name="1-2" :open-names="['1']" width="auto">
+      <div class="left-layout" slot="left">
+        <Menu class="iview-examples__menu" active-name="1-2" :open-names="['1']" width="auto">
           <Submenu name="/table">
             <template slot="title">
               <Icon type="ios-analytics" />Table 表格
@@ -35,8 +35,16 @@
           </Submenu>
         </Menu>
       </div>
-      <div class="right" slot="right">
-        <router-view />
+      <div class="right-layout" slot="right">
+        <div class="iview-examples__content—header">
+          <Breadcrumb class="iview-examples__bread-crumb">
+            <BreadcrumbItem to="/">Home</BreadcrumbItem>
+            <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
+            <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
+          </Breadcrumb>
+          <h2>基础表格</h2>
+        </div>
+        <router-view class="iview-examples__content"/>
       </div>
     </TwoColsLayout>
   </div>
@@ -48,18 +56,35 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "@/styles/variables";
 .iview-examples-container {
   height: 100%;
 }
 .iview-examples-container__layout {
   height: 100%;
-  .left {
+  .left-layout {
     background-color: #fff;
     height: 100%;
+    border-right: 1px solid $--border--color;
+    padding-top: 16px;
   }
-  .right {
-    padding: 24px;
+  .right-layout {
+    height: 100%;
+    overflow: auto;
   }
+}
+.iview-examples__content—header {
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid $--border--color;
+}
+.iview-examples__bread-crumb {
+  margin-bottom: 16px;
+}
+.iview-examples__content {
+  margin: 24px;
+  padding: 24px;
+  background-color: #fff;
 }
 /deep/ .ivu-menu-vertical.ivu-menu-light:after {
   display: none;

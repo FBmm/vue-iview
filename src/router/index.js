@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 import Layout from '@/layout'
 import homeRouter from './modules/home'
+import iviewExamplesRouter from './modules/iview-examples'
 
 const constantRoutes  = [
   {
@@ -18,6 +19,7 @@ const constantRoutes  = [
     component: Layout 
   },
   homeRouter,
+  iviewExamplesRouter,
   { path: '*',
     redirect: '/404',
     hidden: true

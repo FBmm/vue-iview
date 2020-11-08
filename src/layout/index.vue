@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Menu mode="horizontal" theme="dark" active-name="/home" @on-select="onMenuSelect">
+    <Menu class="main-menu" theme="primary" mode="horizontal" active-name="/home" @on-select="onMenuSelect">
       <MenuItem name="/home">
         <Icon type="md-home" />主页
       </MenuItem>
-      <MenuItem name="2">
-        <Icon type="ios-people" />用户管理
+      <MenuItem name="/iview-examples">
+        <Icon type="ios-people" />iview-examples
       </MenuItem>
       <Submenu name="3">
         <template slot="title">
@@ -44,4 +44,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.main-menu {
+  background-color: #1890ff;
+}
 </style>

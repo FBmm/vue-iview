@@ -8,9 +8,7 @@
               <Icon type="ios-analytics" />Table 表格
             </template>
               <MenuItem name="1-1">基础表格</MenuItem>
-              <MenuItem name="1-2">Option 2</MenuItem>
-              <MenuItem name="1-3">Option 3</MenuItem>
-              <MenuItem name="1-4">Option 4</MenuItem>
+              <MenuItem name="1-2">分页表格</MenuItem>
           </Submenu>
           <Submenu name="2">
             <template slot="title">

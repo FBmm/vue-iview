@@ -20,6 +20,17 @@ const constantRoutes  = [
   },
   homeRouter,
   iviewExamplesRouter,
+  {
+    path: '/',
+    component: Layout,
+    children: [
+      {
+        path: '/test',
+        name: 'test',
+        component: () => import('@/views/test/index'),
+      }
+    ]
+  },
   { path: '*',
     redirect: '/404',
     hidden: true

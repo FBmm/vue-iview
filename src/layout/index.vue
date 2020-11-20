@@ -21,6 +21,9 @@
           <MenuItem name="3-5">流失用户</MenuItem>
         </MenuGroup>
       </Submenu>
+      <MenuItem name="/test">
+        <Icon type="logo-apple" />测试
+      </MenuItem>
       <MenuItem name="4">
         <Icon type="ios-construct" />综合设置
       </MenuItem>

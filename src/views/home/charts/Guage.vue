@@ -32,7 +32,7 @@ export default {
         },
         series: [
           {
-            name: "业务指标",
+            name: "性能指标",
             type: "gauge",
             axisLine: {
                 lineStyle: {

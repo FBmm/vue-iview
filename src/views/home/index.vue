@@ -1,25 +1,29 @@
 <template>
   <div class="app-container home-container">
-    <PageViewChart />
+    <BarChart />
     <div class="two-layout">
-      <PageViewChart1 />
-      <PageViewChart2 />
+      <LineChart />
+      <Guage />
     </div>
-    <div class="three-layout">
-      <WordCloud />
-      <LiquidFill />
+    <div class="two-layout">
+      <div class="two-layout__left">
+        <WordCloud />
+        <LiquidFill />
+      </div>
+      <RadarChart />
     </div>
   </div>
 </template>
 
 <script>
-import PageViewChart from "./charts/PageView"
-import PageViewChart1 from "./charts/PageView1"
-import PageViewChart2 from "./charts/PageView2"
+import BarChart from "./charts/BarChart"
+import LineChart from "./charts/LineChart"
+import RadarChart from "./charts/RadarChart"
 import WordCloud from "./charts/WordCloud"
 import LiquidFill from "./charts/LiquidFill"
+import Guage from "./charts/Guage"
 export default {
-  components: { PageViewChart, PageViewChart1, PageViewChart2, WordCloud, LiquidFill }
+  components: { BarChart, LineChart, RadarChart, WordCloud, LiquidFill, Guage }
 }
 </script>
 
@@ -30,10 +34,9 @@ export default {
   grid-template-columns: 2fr 1fr;
   grid-gap: 24px;
 }
-.three-layout {
-  margin-top: 24px;
+.two-layout__left {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
 }
 </style>
